@@ -173,6 +173,12 @@
     .nav-item .nav-link{
         border:0 !important;
     }
+    .main-slider{
+        height: 288px;
+    }
+    .main-slider .carousel-item{
+        height: 288px;
+    }
     .card-body__p1{
         font-weight: 300;
     }
