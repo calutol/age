@@ -173,12 +173,14 @@
     .nav-item .nav-link{
         border:0 !important;
     }
+    .card-body__p1{
+        font-weight: 300;
+    }
     .card-title{
         font-size: 14px !important;
     }
     .card-body, .card-footer{
-        padding-left: 12px;
-        padding-right: 12px;
+        padding: 12px;
     }
     .small__mpg--span{
         font-size: 12px;
