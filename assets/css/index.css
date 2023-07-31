@@ -237,6 +237,13 @@
         color: #dc3545;
         display: block;
     }
+    footer{
+        font-size: 14px;
+    }
+    footer h5{
+        font-size: 18px;
+
+    }
 }
 
 /* @media 768 and 991.89*/
