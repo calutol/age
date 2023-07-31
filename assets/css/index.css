@@ -54,7 +54,7 @@
 }
 
 /* Cominezo de estilos */
-.header, main{
+.header, main, footer{
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Roboto', Arial,sans-serif;
 }
 
@@ -152,7 +152,6 @@
     background-color: #3264ff;
     border-radius: 4px;
 }
-
 .gotdx{
     animation: preview-shrink-animation 7s infinite;
 }
@@ -204,6 +203,7 @@
         padding: 0 0 20px;
         width: 100%;
     }
+    
     /*Lo mejor de ilymartravel mobile*/
     .lmei-mobile{
         display: flex;
@@ -238,3 +238,26 @@
         display: block;
     }
 }
+
+/* @media 768 and 991.89*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .main-slider{
+        height: 300px;
+    }
+    .main-slider .carousel-item{
+        height: 300px;
+    }
+    .nav-swiper-table{
+        display: flex;
+        flex-wrap: nowrap;
+        margin-bottom: -20px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 0 0 20px;
+        width: 100%;
+    }
+
+    .main-content__title{
+        *background-color: red;
+    }
+ }
