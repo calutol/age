@@ -178,6 +178,9 @@
     .main-slider .carousel-item{
         height: 288px;
     }
+    .main-content__title{
+        padding-top: 2rem !important;
+    }
     .card-body__p1{
         font-weight: 300;
     }
@@ -263,8 +266,10 @@
         padding: 0 0 20px;
         width: 100%;
     }
-
-    .main-content__title{
-        *background-color: red;
+    footer{
+        font-size: 14px;
+    }
+    .nav-item .nav-link{
+        border: 0 !important;
     }
  }
