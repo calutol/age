@@ -178,6 +178,10 @@
     .main-slider .carousel-item{
         height: 288px;
     }
+    .main-content{
+        border-top-right-radius: 1rem;
+        border-top-left-radius: 1rem;
+    }
     .main-content__title{
         padding-top: 2rem !important;
     }
@@ -263,6 +267,10 @@
     }
     .main-slider .carousel-item{
         height: 300px;
+    }
+    .main-content{
+        border-top-right-radius: 1rem;
+        border-top-left-radius: 1rem;
     }
     .nav-swiper-table{
         display: flex;
