@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/picture.css">
+    <link rel="stylesheet" href="assets/css/swiper-css/cdn.jsdelivr.net_npm_swiper@10_swiper-bundle.min.css">
     <script src="https://kit.fontawesome.com/a39f274e63.js" crossorigin="anonymous"></script>
 </head>
 
@@ -66,7 +67,7 @@
                                 <a class="nav-link px-3" href="#">Contacto</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link ms-lg-5 px-3 border-start" href="#" title="Oferton Ilymartravel"><span class="d-none d-lg-inline-block"><img src="assets/images/giftbox5.png" alt="Oferton Ilymartravel" width="20" class="img-fluid me-1"></span> Ofertas</a>
+                                <a class="nav-link px-3 border-start" href="#" title="Oferton Ilymartravel"><span class="d-none d-lg-inline-block"><img src="assets/images/giftbox5.png" alt="Oferton Ilymartravel" width="20" class="img-fluid me-1"></span> Ofertas</a>
                             </li>
                         </ul>
                     </div>
@@ -77,6 +78,7 @@
 
     <!--Inicio Cuerpo-->
     <main class="main">
+        <!--Slider Principal-->
         <div class="w-100 bg-secondary main-slider overflow-hidden">
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -103,157 +105,1051 @@
                 </button>
             </div>
         </div>
+
         <!--Lista de Card-->
         <div class="w-100 p-3 pb-4 main-content bg-body">
+
             <!--Excursiones-->
             <div class="container px-0">
-                <!--Carrusel-->
                 <!--Titulo h2-->
                 <div class="main-content__title pt-5 pb-2 mb-3">
                     <h2 class="fw-semibold fs-3">Excursiones para ti</h2>
                     <div class="overflow-hidden w-100">
-                        <nav class="nav nav-underline nav-swiper">
-                            <a class="nav-link active ps-0 text-nowrap" aria-current="page" href="#">Solo para ti</a>
-                            <a class="nav-link text-secondary text-nowrap" href="#">Europa</a>
-                            <a class="nav-link text-secondary text-nowrap" href="#">America</a>
-                            <a class="nav-link text-secondary text-nowrap" href="#">Paises Arabes</a>
-                            <a class="nav-link text-secondary text-nowrap" href="#">Africa</a>
-                            <a class="nav-link text-secondary text-nowrap" href="#">Asia</a>
-                            <a class="nav-link text-secondary text-nowrap" href="#">Oceania</a>
-                            <a class="nav-link text-secondary text-nowrap" href="#">Antártida</a>
+                        <nav class="nav nav-underline nav-swiper" id="nav-tab" role="tablist">
+                            <button class="nav-link active ps-0 text-nowrap" aria-current="page" id="exc-excursion-tab" data-bs-toggle="tab" data-bs-target="#exc-excursion" type="button" role="tab" aria-controls="exc-excursion" aria-selected="true">Solo para ti</button>
+                            <button class="nav-link text-secondary text-nowrap" id="exc-europa-tab" data-bs-toggle="tab" data-bs-target="#exc-europa" type="button" role="tab" aria-controls="exc-europa" aria-selected="false">Europa</button>
+                            <button class="nav-link text-secondary text-nowrap" id="exc-america-tab" data-bs-toggle="tab" data-bs-target="#exc-america" type="button" role="tab" aria-controls="exc-america" aria-selected="false">America</button>
+                            <button class="nav-link text-secondary text-nowrap" id="exc-paisesArabes-tab" data-bs-toggle="tab" data-bs-target="#exc-paisesArabes" type="button" role="tab" aria-controls="exc-paisesArabes" aria-selected="false">Paises Arabes</button>
+                            <button class="nav-link text-secondary text-nowrap" id="exc-africa-tab" data-bs-toggle="tab" data-bs-target="#exc-africa" type="button" role="tab" aria-controls="exc-africa" aria-selected="false">Africa</button>
+                            <button class="nav-link text-secondary text-nowrap" id="exc-asia-tab" data-bs-toggle="tab" data-bs-target="#exc-asia" type="button" role="tab" aria-controls="exc-asia" aria-selected="false">Asia</button>
+                            <button class="nav-link text-secondary text-nowrap" id="exc-oceania-tab" data-bs-toggle="tab" data-bs-target="#exc-oceania" type="button" role="tab" aria-controls="exc-oceania" aria-selected="false">Oceania</button>
+                            <button class="nav-link text-secondary text-nowrap" id="exc-antartida-tab" data-bs-toggle="tab" data-bs-target="#exc-antartida" type="button" role="tab" aria-controls="exc-antartida" aria-selected="false">Antártida</button>
                         </nav>
                     </div>
                 </div>
                 <!--Card-->
-                <div class="">
-                    <div class="row row-cols-2 row-cols-md-4 row-cols-lg-4 g-2 g-md-2 g-lg-4">
-                        <div class="col">
-                            <a class="nav-link h-100 a-card rounded-4" href="">
-                                <div class="card rounded-4 h-100 placeholder-glow">
-                                    <div class="placeholder img-loader">
-                                        <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
-                                        <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Turquía en fin de año - Diciembre 2023</h5>
-                                        <div class="content-star placeholder color-loader rounded-3">
-                                            <span><i class="bi bi-star-fill"></i></span>
-                                            <span><i class="bi bi-star-fill"></i></span>
-                                            <span><i class="bi bi-star-fill"></i></span>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="exc-excursion" role="tabpanel" aria-labelledby="exc-excursion-tab" tabindex="0">
+                        <div class="">
+                            <div class="row row-cols-2 row-cols-md-4 row-cols-lg-4 g-2 g-md-2 g-lg-4">
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Turquía en fin de año - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg px-0 overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Mejor precio garantizado</span>
+                                                    </div>
+                                                </small>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
-                                        <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
-                                            <div class="placeholder rounded-3">
-                                                <span class="fw-light">Desde</span>
-                                                <span class="fw-semibold">$200.00</span>
-                                            </div>
-                                            <div class="small__mpg px-0 overflow-hidden placeholder-glow">
-                                                <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Mejor precio garantizado</span>
-                                            </div>
-                                        </small>
-                                    </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="col">
-                            <a class="nav-link h-100 a-card rounded-4" href="">
-                                <div class="card rounded-4 h-100 placeholder-glow">
-                                    <div class="placeholder img-loader">
-                                        <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
-                                        <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Italia, Suiza, Francia y España... - Diciembre 2023</h5>
-                                        <div class="content-star placeholder color-loader rounded-3">
-                                            <span><i class="bi bi-star-fill"></i></span>
-                                            <span><i class="bi bi-star-fill"></i></span>
-                                            <span><i class="bi bi-star-fill"></i></span>
-                                            <span><i class="bi bi-star-fill"></i></span>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Italia, Suiza, Francia y España... - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg px-0 overflow-hidden placeholder-glow d-none">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Mejor precio garantizado</span>
+                                                    </div>
+                                                </small>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
-                                        <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
-                                            <div class="placeholder rounded-3">
-                                                <span class="fw-light">Desde</span>
-                                                <span class="fw-semibold">$200.00</span>
-                                            </div>
-                                            <div class="small__mpg px-0 overflow-hidden placeholder-glow d-none">
-                                                <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Mejor precio garantizado</span>
-                                            </div>
-                                        </small>
-                                    </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="col">
-                            <a class="nav-link h-100 a-card rounded-4" href="">
-                                <div class="card rounded-4 h-100 placeholder-glow">
-                                    <div class="placeholder img-loader">
-                                        <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
-                                        <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Europa - Diciembre 2023</h5>
-                                        <div class="content-star placeholder color-loader rounded-3">
-                                            <span><i class="bi bi-star-fill"></i></span>
-                                            <span><i class="bi bi-star-fill"></i></span>
-                                            <span><i class="bi bi-star-fill"></i></span>
-                                            <span><i class="bi bi-star-fill"></i></span>
-                                            <span><i class="bi bi-star-fill"></i></span>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Europa - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                        <span class="fs-6 text-secondary text-decoration-line-through">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">En oferta</span>
+                                                    </div>
+                                                </small>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
-                                        <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
-                                            <div class="placeholder rounded-3">
-                                                <span class="fw-light">Desde</span>
-                                                <span class="fw-semibold">$200.00</span>
-                                                <span class="fs-6 text-secondary text-decoration-line-through">$200.00</span>
-                                            </div>
-                                            <div class="small__mpg overflow-hidden placeholder-glow">
-                                                <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">En oferta</span>
-                                            </div>
-                                        </small>
-                                    </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="col">
-                            <a class="nav-link h-100 a-card rounded-4" href="">
-                                <div class="card rounded-4 h-100 placeholder-glow">
-                                    <div class="placeholder img-loader">
-                                        <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
-                                        <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Grupo Turquía - Julio 2023</h5>
-                                        <div class="content-star placeholder color-loader rounded-3">
-                                            <span><i class="bi bi-star-fill"></i></span>
-                                            <span><i class="bi bi-star-fill"></i></span>
-                                            <span><i class="bi bi-star-fill"></i></span>
-                                            <span><i class="bi bi-star-half"></i></span>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Grupo Turquía - Julio 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-half"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Precio Ilymartravel</span>
+                                                    </div>
+                                                </small>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
-                                        <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
-                                            <div class="placeholder rounded-3">
-                                                <span class="fw-light">Desde</span>
-                                                <span class="fw-semibold">$200.00</span>
-                                            </div>
-                                            <div class="small__mpg overflow-hidden placeholder-glow">
-                                                <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Precio Ilymartravel</span>
-                                            </div>
-                                        </small>
-                                    </div>
+                                    </a>
                                 </div>
-                            </a>
+                            </div>
                         </div>
                     </div>
+                    <div class="tab-pane fade" id="exc-europa" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+                        <div class="">
+                            <div class="row row-cols-2 row-cols-md-4 row-cols-lg-4 g-2 g-md-2 g-lg-4">
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Turquía en fin de año - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg px-0 overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Mejor precio garantizado</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Italia, Suiza, Francia y España... - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg px-0 overflow-hidden placeholder-glow d-none">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Mejor precio garantizado</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Europa - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                        <span class="fs-6 text-secondary text-decoration-line-through">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">En oferta</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Grupo Turquía - Julio 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-half"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Precio Ilymartravel</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="exc-america" role="tabpanel" aria-labelledby="exc-america-tab" tabindex="0">
+                        <div class="">
+                            <div class="row row-cols-2 row-cols-md-4 row-cols-lg-4 g-2 g-md-2 g-lg-4">
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Turquía en fin de año - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg px-0 overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Mejor precio garantizado</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Italia, Suiza, Francia y España... - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg px-0 overflow-hidden placeholder-glow d-none">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Mejor precio garantizado</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Europa - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                        <span class="fs-6 text-secondary text-decoration-line-through">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">En oferta</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Grupo Turquía - Julio 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-half"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Precio Ilymartravel</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="exc-paisesArabes" role="tabpanel" aria-labelledby="exc-paisesArabes-tab" tabindex="0">
+                        <div class="">
+                            <div class="row row-cols-2 row-cols-md-4 row-cols-lg-4 g-2 g-md-2 g-lg-4">
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Turquía en fin de año - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg px-0 overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Mejor precio garantizado</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Italia, Suiza, Francia y España... - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg px-0 overflow-hidden placeholder-glow d-none">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Mejor precio garantizado</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Europa - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                        <span class="fs-6 text-secondary text-decoration-line-through">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">En oferta</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Grupo Turquía - Julio 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-half"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Precio Ilymartravel</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="exc-africa" role="tabpanel" aria-labelledby="exc-africa-tab" tabindex="0">
+                        <div class="">
+                            <div class="row row-cols-2 row-cols-md-4 row-cols-lg-4 g-2 g-md-2 g-lg-4">
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Turquía en fin de año - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg px-0 overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Mejor precio garantizado</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Italia, Suiza, Francia y España... - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg px-0 overflow-hidden placeholder-glow d-none">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Mejor precio garantizado</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Europa - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                        <span class="fs-6 text-secondary text-decoration-line-through">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">En oferta</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Grupo Turquía - Julio 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-half"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Precio Ilymartravel</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="exc-asia" role="tabpanel" aria-labelledby="exc-asia-tab" tabindex="0">
+                        <div class="">
+                            <div class="row row-cols-2 row-cols-md-4 row-cols-lg-4 g-2 g-md-2 g-lg-4">
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Turquía en fin de año - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg px-0 overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Mejor precio garantizado</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Italia, Suiza, Francia y España... - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg px-0 overflow-hidden placeholder-glow d-none">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Mejor precio garantizado</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Europa - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                        <span class="fs-6 text-secondary text-decoration-line-through">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">En oferta</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Grupo Turquía - Julio 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-half"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Precio Ilymartravel</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="exc-oceania" role="tabpanel" aria-labelledby="exc-oceania-tab" tabindex="0">
+                        <div class="">
+                            <div class="row row-cols-2 row-cols-md-4 row-cols-lg-4 g-2 g-md-2 g-lg-4">
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Turquía en fin de año - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg px-0 overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Mejor precio garantizado</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Italia, Suiza, Francia y España... - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg px-0 overflow-hidden placeholder-glow d-none">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Mejor precio garantizado</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Europa - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                        <span class="fs-6 text-secondary text-decoration-line-through">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">En oferta</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Grupo Turquía - Julio 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-half"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Precio Ilymartravel</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="exc-antartida" role="tabpanel" aria-labelledby="exc-antartida-tab" tabindex="0">
+                        <div class="">
+                            <div class="row row-cols-2 row-cols-md-4 row-cols-lg-4 g-2 g-md-2 g-lg-4">
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Turquía en fin de año - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg px-0 overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Mejor precio garantizado</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Italia, Suiza, Francia y España... - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg px-0 overflow-hidden placeholder-glow d-none">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Mejor precio garantizado</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Europa - Diciembre 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                        <span class="fs-6 text-secondary text-decoration-line-through">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">En oferta</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="nav-link h-100 a-card rounded-4" href="">
+                                        <div class="card rounded-4 h-100 placeholder-glow">
+                                            <div class="placeholder img-loader">
+                                                <img src="assets/images/excursiones/turquia.jpg" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-1 lh-base text-secondary card-body__p1 placeholder color-loader rounded-3">Guía en español</div>
+                                                <h5 class="card-title fs-6 lh-base fw-semibold placeholder color-loader rounded-3 title-truncate">Grupo Turquía - Julio 2023</h5>
+                                                <div class="content-star placeholder color-loader rounded-3">
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-fill"></i></span>
+                                                    <span><i class="bi bi-star-half"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-white border-0 rounded-4 placeholder-glow overflow-hidden">
+                                                <small class="text-dark fs-6 color-loader rounded-3 overflow-hidden">
+                                                    <div class="placeholder rounded-3">
+                                                        <span class="fw-light">Desde</span>
+                                                        <span class="fw-semibold">$200.00</span>
+                                                    </div>
+                                                    <div class="small__mpg overflow-hidden placeholder-glow">
+                                                        <span class="small__mpg--span rounded placeholder d-inline-block text-truncate color-loader bg-loader">Precio Ilymartravel</span>
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
 
-                    <!--Boton ver más-->
-                    <div class="mt-4 pt-2 d-grid gap-2 col col-lg-3 mx-auto">
-                        <a type="button" class="btn fw-semibold border border-secondary" href="">Ver más</a>
-                    </div>
+                  <!--Boton ver más-->
+                  <div class="mt-4 pt-2 d-grid gap-2 col col-lg-3 mx-auto">
+                    <a type="button" class="btn fw-semibold border border-secondary" href="404.html">Ver más</a>
                 </div>
             </div>
 
@@ -872,7 +1768,8 @@
                 </div>
             </div>
         </div>
-
+        
+        <!--Parrafo seo-->
         <div class="w-100 p-3 py-3 border-top home-seo">
             <div class="container py-5">
                 <h1 class="fs-4 fw-semibold">¿Buscas una agencia de viaje y excursiones que te haga vivir aventuras inolvidables?</h1>
@@ -977,15 +1874,8 @@
         crossorigin="anonymous"></script>
         <!--Jquery-->
         <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-        <script>
-            
-            function miFuncion() {
-  // Código que deseas ejecutar una vez que la página se haya cargado completamente
-                $(".placeholder").removeClass('placeholder')
-                $(".color-loader").removeClass('color-loader')
-                $(".bg-loader").removeClass('bg-loader')
-}
-        </script>
+        <!--Placeholder-->
+        <script src="assets/js/lending-page.js"></script>
 </body>
 
 </html>
