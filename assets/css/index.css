@@ -173,7 +173,7 @@
         padding-right:  0;
         padding-left: 0;
     }
-    .header .offcanvas-body .nav-item{
+    .header .navbar-nav li:not(:last-child){
         border-bottom: 1px solid rgba(0, 0, 0, 0.175);
     }
     .nav-item .nav-link{
@@ -291,7 +291,7 @@
         padding-right:  0;
         padding-left: 0;
     }
-    .header .offcanvas-body .nav-item{
+    .header .navbar-nav li:not(:last-child){
         border-bottom: 1px solid rgba(0, 0, 0, 0.175);
     }
     .nav-item .nav-link{
