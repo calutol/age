@@ -183,6 +183,9 @@
         border-top-left-radius: 1rem;
     }
     .main-content__title{
+        padding-top: 2.8rem !important;
+    }
+    .pd-top-1{
         padding-top: 1rem !important;
     }
     .card-body__p1{
@@ -271,6 +274,9 @@
     .main-content{
         border-top-right-radius: 1rem;
         border-top-left-radius: 1rem;
+    }
+    .pd-top-1{
+        padding-top: 1rem !important;
     }
     .nav-swiper-table{
         display: flex;
