@@ -4,4 +4,5 @@ function miFuncion() {
     $(".placeholder").removeClass('placeholder')
     $(".color-loader").removeClass('color-loader')
     $(".bg-loader").removeClass('bg-loader')
+    $(".border-loader").removeClass('border-loader')
 }

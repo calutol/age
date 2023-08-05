@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ilymartravel demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/details.css">
+    <link rel="stylesheet" href="assets/css/swiper-css/cdn.jsdelivr.net_npm_swiper@10_swiper-bundle.min.css">
+    <script src="https://kit.fontawesome.com/a39f274e63.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="miFuncion()" id="ancla">
+    <!--Inicio header-->
+    <header class="header sticky-top">
+        <nav class="navbar navbar-expand-lg bg-body border-bottom">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/images/ilymartravel.png" alt="Logo ilymartravel" width="100" class="img-fluid">
+                </a>
+                <img src="assets/images/giftbox5.png" alt="Oferton Ilymartravel" width="22" class="img-fluid me-1 d-lg-none m-auto me-3">
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header border-bottom">
+                        <h5 class="offcanvas-title" id="offcanvasRightLabel">Menú de usuario</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active px-3" aria-current="page" href="index.html">Inicio<i class="bi bi-chevron-right d-lg-none d-md-inline-block d-sm-block ps-2"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-3" href="excursiones.html">Excursiones<i class="bi bi-chevron-right d-lg-none d-md-inline-block d-sm-block ps-2"></i></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle px-3" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Destinos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item py-2" href="404.html">Florida</a></li>
+                                    <li><a class="dropdown-item py-2" href="404.html">Europa</a></li>
+                                    <li><a class="dropdown-item py-2" href="404.html">Punta cana</a></li>
+                                    <li><a class="dropdown-item py-2" href="404.html">Thanksgiving</a></li>
+                                    <li><a class="dropdown-item py-2" href="404.html">Fin de Año 2023</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-3" href="404.html">Cruceros<i class="bi bi-chevron-right d-lg-none d-md-inline-block d-sm-block ps-2"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-3" href="404.html">Galería<i class="bi bi-chevron-right d-lg-none d-md-inline-block d-sm-block ps-2"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-3" href="404.html">Contacto<i class="bi bi-chevron-right d-lg-none d-md-inline-block d-sm-block ps-2"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-3 border-start" href="404.html" title="Oferton Ilymartravel"><span class="d-none d-lg-inline-block"><img src="assets/images/giftbox5.png" alt="Oferton Ilymartravel" width="20" class="img-fluid me-1"></span> Ofertas<i class="bi bi-chevron-right d-lg-none d-md-inline-block d-sm-block ps-2"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--Inicio Cuerpo-->
+    <main class="main bg-body-secondary pb-5">
+        <!--Lista de Card-->
+        <div class="w-100 px-3 py-4 bg-body">
+
+            <!--Plantilla destinos-->
+            <div class="container px-0">
+                <!--Titulo h2-->
+                <div class="main-content__title pt-4 pb-2 mb-3 pd-top-1">
+                    <div class="" >
+                        <h2 class="fw-semibold fs-3">Turquía en fin de año - Diciembre 2023</h2>
+                    </div>
+                    <p class="m-0 fw-light text-secondary">Obtenga nuestros paquetes más vendidos a los mejores precios.</p>
+                </div>
+
+                <!--Card lg-->
+                <div class="d-none d-lg-block">
+                    <div class="row placeholder-glow">
+                        <div class="col-4 position-relative overflow-hidden">
+                            <div class="img-col-4 bg-secondary w-100 h-100 rounded-4 placeholder">
+                                <span class="position-absolute start-0 bottom-0 ps-3 m-2 ">
+                                    <button 
+                                    type="button" 
+                                    class="btn bg-white border border-1 border-black rounded-4 fw-semibold color-loader bg-loader border-loader"
+                                    data-bs-toggle="modal" data-bs-target="#galeriaDestinos">
+                                        <i class="bi bi-image-alt me-2"></i>Galeria
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="img-col-sub-3 w-100 h-100 d-grid gap-2">
+                                <div class="bg-secondary rounded-4 placeholder"></div>
+                                <div class="bg-secondary rounded-4 placeholder"></div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="img-col-3 bg-secondary w-100 h-100 rounded-4 placeholder"></div>
+                        </div>
+                        <div class="col-2 ">
+                            <div class="galery-card bg-primary-subtle border border-primary-subtle rounded-4 p-2 placeholder color-loader bg-loader border-loader">
+                                <p class="text-white fw-semibold mb-2 p-1">
+                                    <span class="galery-card-title px-2 rounded-4 color-loader bg-loader">Destacado</span>
+                                </p>
+                                <div class="galery-card__box">
+                                    <div class="d-flex fs-7 text-nowrap mb-1">
+                                        <i class="bi bi-check2-circle me-1"></i>
+                                        <div class="galery-card__box-details">
+                                            <div class="fw-semibold galery-card__box-title mb-1">Tour por la ciudad</div>
+                                            <div class="galery-card__box-SubTitle mb-1">Día 2 Turquia</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex fs-7 text-nowrap mb-1">
+                                        <i class="bi bi-check2-circle me-1"></i>
+                                        <div class="galery-card__box-details">
+                                            <div class="fw-semibold galery-card__box-title mb-1">Tour por la ciudad</div>
+                                            <div class="galery-card__box-SubTitle mb-1">Día 2 Turquia</div>
+                                        </div>
+                                    </div>
+                                    <div class="galery-card__box-img bg-body-secondary rounded bg-loader">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Card md sm-->
+                <div class="d-xxl-none d-lg-none d-md-block d-sm-block">
+                    <div class="swiper mySwiper swiperMobile rounded-4">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-mobile-img bg-secondary">
+                                <img class="" src="assets/images/122.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide swiper-mobile-img bg-secondary"></div>
+                            <div class="swiper-slide swiper-mobile-img bg-secondary"></div>
+                            <div class="swiper-slide swiper-mobile-img bg-secondary"></div>
+                        </div>
+                        <div class="swiper-button-next swiper-naVBtn"></div>
+                        <div class="swiper-button-prev swiper-naVBtn"></div>
+                        <div class="swiper-pagination pagination-naVbtn"></div>
+                    </div>
+                </div>
+
+                <!--Content-detail-->
+                <div class="mt-5">
+                    <p class="fw-semibold fs-4 mb-4 border-bottom pb-3">Detalles del paquete</p>
+                    <div class="row d-none">
+                        <div class="col-2">
+                            <p class="fs-5 fw-semibold text-secondary">Plan del día</p>
+                            <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+                                <nav class="nav nav-pills flex-column">
+                                  <a class="nav-link" href="#item-1">Dia 1</a>
+                                  <a class="nav-link" href="#item-2">Dia 2</a>
+                                  <a class="nav-link" href="#item-3">Dia 3</a>
+                                  <a class="nav-link" href="#item-3">Dia 4</a>
+                                </nav>
+                              </nav>
+                        </div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                    </div>
+                </div>
+
+            </div>
+        
+        <!--Botones laterales-->
+        <div class="btn-lateral d-none d-sm-none d-lg-block d-md-block">
+            <div class="btn-lateral__item">
+                <a class="nav-link d-flex justify-content-center align-items-center text-white w-100 h-100 fs-3" href="#ancla"
+                    title="Arriba">
+                    <i class="fa-solid fa-chevron-up"></i>
+                </a>
+            </div>
+            <div class="btn-lateral__item mt-1">
+                <a target="_blank" class="nav-link d-flex justify-content-center align-items-center text-white w-100 h-100 fs-3" href="https://www.whatsapp.com/"
+                    title="Whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="galeriaDestinos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content border-0 bg-light">
+                    <div class="modal-header border-0 pb-0">
+                        <h1 class="modal-title fs-6" id="exampleModalLabel">
+                            <span class="py-2 px-3"><i class="bi bi-image-alt me-2"></i>Galería de Turquía en fin de año - Diciembre 2023</span>
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="swiper mySwiper swiperDesktop rounded-4">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper-lg-img bg-secondary">
+                                    <img src="assets/images/122.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide swiper-lg-img bg-secondary"></div>
+                                <div class="swiper-slide swiper-lg-img bg-secondary"></div>
+                                <div class="swiper-slide swiper-lg-img bg-secondary"></div>
+                            </div>
+                            <div class="swiper-button-next swiper-naVBtn border-2 border light-subtle"></div>
+                            <div class="swiper-button-prev swiper-naVBtn border-2 border light-subtle"></div>
+                            <div class="swiper-pagination pagination-naVbtn"></div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--Inicio Footer-->
+    <footer class="w-100 border-top p-3 p-lg-0">
+        <div class="container py-4">
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-2">
+              <div class="col">
+                <h5 class="my-2">Atención al cliente</h5>
+                <div><a class="nav-link" href="">Correo: ilymarservices@yahoo.com</a></div>
+                <div><a class="nav-link" href="">Teléfono: (786) 275-4014</a></div>
+              </div>
+              <div class="col">
+                <h5 class="my-2">Encuéntranos</h5>
+                <div><a class="nav-link" href="">Dirección: 900 W 49th St, Hialeah, FL 33012</a></div>
+                <div><a class="nav-link" href="">Horarios: Atención Personalizada 24/7</a></div>
+              </div>
+              <div class="col">
+                <h5 class="my-2 mt-lg-0">Links</h5>
+                <div>
+                    <a class="nav-link d-inline-block" href="">Inicio,</a>
+                    <a class="nav-link d-inline-block" href="">Excursiones,</a>
+                    <a class="nav-link d-inline-block" href="">Destinos,</a>
+                    <a class="nav-link d-inline-block" href="">Viajes,</a>
+                </div>
+                <div>
+                    <a class="nav-link d-inline-block" href="">Cruceros,</a>
+                    <a class="nav-link d-inline-block" href="">Galerías,</a>
+                    <a class="nav-link d-inline-block" href="">Contactos,</a>
+                    <a class="nav-link d-inline-block" href="">Ofertas</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="border-top">
+            <div class="container py-2 fs-7 footer__sub d-none d-lg-block d-md-block">© Todos los derechos reservados por Ilymartravel 2023</div>
+            <div class="container pt-2 fs-7 footer__sub d-lg-none d-md-none d-sm-block">© 2023 Ilymartravel. All rights reserved</div>
+        </div>
+    </footer>
+
+    <!--Script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <!--Placeholder-->
+    <script src="assets/js/lending-page.js"></script>
+    <script src="assets/js/swiper/cdn.jsdelivr.net_npm_swiper@10_swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper/Initialize-swiper.js"></script>
+</body>
+
+</html>

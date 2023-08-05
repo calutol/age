@@ -9,11 +9,12 @@
     --bg-mpg: #FFF0E5;
     --color-loader:rgb(108,117,125);
     --bg-loader: rgb(108,117,125);
+    --border-loader: rgb(108,117,125);
 }
 
 /* Colores bg y color loading - clases para que sean del mismo color a la hora de cargar el sitio web*/
 .bg-loader{
-    background-color: var(--bg-loader) !important;
+    background: var(--bg-loader) !important;
 }
 .color-loader{
     color: var(--color-loader) !important;
@@ -27,7 +28,9 @@
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
 }
-
+.border-loader{
+    border-color: var(--border-loader) !important;
+}
 /* Clases universales */
 .fs-7{
     font-size: 14px;
