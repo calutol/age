@@ -55,6 +55,21 @@
     .swiper-button-prev::after {
         font-size: 28px !important;
     }
+
+    .content-detail__title {
+        font-size: 14px !important;
+    }
+
+    .btn-reservar {
+        background: rgb(255, 91, 0);
+        background: linear-gradient(108deg, rgba(255, 91, 0, 1) 0%, rgba(255, 90, 20, 1) 100%, rgba(255, 255, 255, 1) 100%);
+        font-size: 14px !important;
+        margin: .6rem .2rem !important;
+    }
+
+    .box-reserva__fecha {
+        font-size: 13px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -129,9 +144,23 @@
         width: 12px;
         height: 12px;
     }
-    .img-col-4{
+
+    .img-col-4 {
         background-image: url('../images/122.jpg');
         background-repeat: repeat;
         background-size: cover;
+    }
+
+    .content-detail {
+        top: 90px;
+    }
+
+    .box-reserva {
+        top: 55px;
+    }
+
+    .btn-reservar {
+        background: rgb(255, 91, 0);
+        background: linear-gradient(108deg, rgba(255, 91, 0, 1) 0%, rgba(255, 90, 20, 1) 100%, rgba(255, 255, 255, 1) 100%);
     }
 }
