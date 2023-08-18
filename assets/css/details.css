@@ -180,6 +180,10 @@
         user-select: none;
         /* Para otros navegadores */
     }
+
+    .content-detail .nav-link {
+        color: #343a40;
+    }
 }
 
 @media (max-width: 576px) {
