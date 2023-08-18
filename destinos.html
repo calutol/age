@@ -177,13 +177,18 @@
                 <div class="mt-5">
                     <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-3">
                         <p class="fw-semibold fs-4 mb-0">Detalles del paquete</p>
-                        <div class="content-star">
+                        <div class="content-star d-none d-lg-block d-md-block">
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-half"></i>
                             <i class="bi bi-star"></i>
                             <span class="text-dark ms-2 fw-semibold">(+Popular)</span>
+                        </div>
+                        <!--Version Mobile-->
+                        <div class="content-star d-lg-none d-md-none">
+                            <i class="bi bi-star-fill"></i>
+                            <span class="fw-semibold">4.7</span>
                         </div>
                     </div>
                     <div class="row">
@@ -211,9 +216,9 @@
 
                         <div class="col-lg-7 col-md-7 col-sm-12">
                             <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true"
-                                class="scrollspy-example-2 px-3" tabindex="0">
+                                class="scrollspy-example-2 px-3 cont-info" tabindex="0">
                                 <div id="item-1">
-                                    <h4>Item 1</h4>
+                                    <h4>Día 1. Viernes, 29 de Diciembre De 2023 - Miami</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit laborum modi
                                         delectus nesciunt! Iste, doloribus. Obcaecati, quibusdam recusandae? Quos nihil
                                         voluptatum, optio vitae est itaque suscipit officiis nobis perferendis
@@ -234,56 +239,56 @@
                                         voluptatem?</p>
                                 </div>
                                 <div id="item-4">
-                                    <h4>Item 3</h4>
+                                    <h4>Item 4</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit laborum modi
                                         delectus nesciunt! Iste, doloribus. Obcaecati, quibusdam recusandae? Quos nihil
                                         voluptatum, optio vitae est itaque suscipit officiis nobis perferendis
                                         voluptatem?</p>
                                 </div>
                                 <div id="item-5">
-                                    <h4>Item 1</h4>
+                                    <h4>Item 5</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit laborum modi
                                         delectus nesciunt! Iste, doloribus. Obcaecati, quibusdam recusandae? Quos nihil
                                         voluptatum, optio vitae est itaque suscipit officiis nobis perferendis
                                         voluptatem?</p>
                                 </div>
                                 <div id="item-6">
-                                    <h4>Item 2</h4>
+                                    <h4>Item 6</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit laborum modi
                                         delectus nesciunt! Iste, doloribus. Obcaecati, quibusdam recusandae? Quos nihil
                                         voluptatum, optio vitae est itaque suscipit officiis nobis perferendis
                                         voluptatem?</p>
                                 </div>
                                 <div id="item-7">
-                                    <h4>Item 3</h4>
+                                    <h4>Item 7</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit laborum modi
                                         delectus nesciunt! Iste, doloribus. Obcaecati, quibusdam recusandae? Quos nihil
                                         voluptatum, optio vitae est itaque suscipit officiis nobis perferendis
                                         voluptatem?</p>
                                 </div>
                                 <div id="item-8">
-                                    <h4>Item 3</h4>
+                                    <h4>Item 8</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit laborum modi
                                         delectus nesciunt! Iste, doloribus. Obcaecati, quibusdam recusandae? Quos nihil
                                         voluptatum, optio vitae est itaque suscipit officiis nobis perferendis
                                         voluptatem?</p>
                                 </div>
                                 <div id="item-9">
-                                    <h4>Item 2</h4>
+                                    <h4>Item 9</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit laborum modi
                                         delectus nesciunt! Iste, doloribus. Obcaecati, quibusdam recusandae? Quos nihil
                                         voluptatum, optio vitae est itaque suscipit officiis nobis perferendis
                                         voluptatem?</p>
                                 </div>
                                 <div id="item-10">
-                                    <h4>Item 3</h4>
+                                    <h4>Item 10</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit laborum modi
                                         delectus nesciunt! Iste, doloribus. Obcaecati, quibusdam recusandae? Quos nihil
                                         voluptatum, optio vitae est itaque suscipit officiis nobis perferendis
                                         voluptatem?</p>
                                 </div>
                                 <div id="item-11">
-                                    <h4>Item 3</h4>
+                                    <h4>Item 11</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit laborum modi
                                         delectus nesciunt! Iste, doloribus. Obcaecati, quibusdam recusandae? Quos nihil
                                         voluptatum, optio vitae est itaque suscipit officiis nobis perferendis
@@ -457,9 +462,9 @@
                             </div>
                             <!--En el cuerpo-->
                             <div class="mt-5 border-top py-4">
-                                <h4 class="text-secondary mb-4 ps-2 fs-6 fw-semibold">Vuelos Previstos o Similares</h4>
-                                <div class="table-responsive">
-                                    <table class="table table table-striped text-nowrap text-center fs-7">
+                                <h4 class="text-secondary mb-4 ps-2 fs-6 fw-semibold">1Vuelos Previstos o Similares</h4>
+                                <div class="table-responsive" id="tabla-contenedor">
+                                    <table class="table table table-striped text-nowrap text-center fs-7" id="tabla">
                                         <tbody>
                                             <tr>
                                                 <td>
@@ -618,41 +623,42 @@
                                 <a class="nav-link px-3 py-1 m-3 rounded-pill text-center fw-semibold btn-reservar text-white fs-5"
                                     href="">Reservar ahora</a>
                             </div>
+                            <!--Agregar sticky-top top-5 z-1-->
                             <div class="border rounded-4 px-3 py-2 mt-3 fs-7">
                                 <div class="">
                                     <p class="fw-semibold text-secondary mt-2"><small>Lo que incluye:</small></p>
                                     <div class="d-flex my-3">
-                                        <i class="bi bi-check2 me-2"></i>
+                                        <i class="bi bi-check2 text-secondary me-2"></i>
                                         <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit</div>
                                     </div>
                                     <div class="d-flex my-2">
-                                        <i class="bi bi-check2 me-2"></i>
+                                        <i class="bi bi-check2 text-secondary me-2"></i>
                                         <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit</div>
                                     </div>
                                     <div class="d-flex my-2">
-                                        <i class="bi bi-check2 me-2"></i>
+                                        <i class="bi bi-check2 text-secondary me-2"></i>
                                         <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit</div>
                                     </div>
                                 </div>
                                 <div class="mt-4">
                                     <p class="fw-semibold text-secondary mt-2"><small>Lo que NO incluye:</small></p>
                                     <div class="d-flex my-3">
-                                        <i class="bi bi-check2 me-2"></i>
+                                        <i class="bi bi-x text-secondary me-2"></i>
                                         <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit</div>
                                     </div>
                                     <div class="d-flex my-2">
-                                        <i class="bi bi-check2 me-2"></i>
+                                        <i class="bi bi-x text-secondary me-2"></i>
                                         <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit</div>
                                     </div>
                                     <div class="d-flex my-2">
-                                        <i class="bi bi-check2 me-2"></i>
+                                        <i class="bi bi-x text-secondary me-2"></i>
                                         <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit</div>
                                     </div>
                                 </div>
                                 <div class="mt-4">
                                     <p class="fw-semibold text-secondary mt-2"><small>Vuelos Previstos:</small></p>
-                                    <div class="table-responsive fs-7">
-                                        <table class=" table table table-striped">
+                                    <div class="table-responsive fs-7" id="table-contenedor">
+                                        <table class=" table table table-striped" id="table">
                                             <tbody class="text-nowrap text-center fw-medium">
                                                 <tr>
                                                     <td class="text-capitalize">
@@ -899,6 +905,37 @@
     <script src="assets/js/lending-page.js"></script>
     <script src="assets/js/swiper/cdn.jsdelivr.net_npm_swiper@10_swiper-bundle.min.js"></script>
     <script src="assets/js/swiper/Initialize-swiper.js"></script>
+    <script>
+        var tablaContenedor = document.getElementById('tabla-contenedor');
+        var isMouseDown = false;
+        var startX;
+        var startY;
+        var startScrollLeft;
+        var startScrollTop;
+
+        tablaContenedor.addEventListener('mousedown', function (e) {
+            startX = e.clientX;
+            startY = e.clientY;
+            startScrollLeft = tablaContenedor.scrollLeft;
+            startScrollTop = tablaContenedor.scrollTop;
+            isMouseDown = true;
+        });
+
+        window.addEventListener('mousemove', function (e) {
+            if (!isMouseDown) return;
+
+            var deltaX = e.clientX - startX;
+            var deltaY = e.clientY - startY;
+
+            tablaContenedor.scrollLeft = startScrollLeft - deltaX;
+            tablaContenedor.scrollTop = startScrollTop - deltaY;
+        });
+
+        window.addEventListener('mouseup', function () {
+            isMouseDown = false;
+        });
+
+    </script>
 </body>
 
 </html>

@@ -70,6 +70,7 @@
     .box-reserva__fecha {
         font-size: 13px;
     }
+
 }
 
 @media (min-width: 992px) {
@@ -162,5 +163,36 @@
     .btn-reservar {
         background: rgb(255, 91, 0);
         background: linear-gradient(108deg, rgba(255, 91, 0, 1) 0%, rgba(255, 90, 20, 1) 100%, rgba(255, 255, 255, 1) 100%);
+    }
+
+    #tabla {
+        cursor: grab;
+    }
+
+    #tabla:active {
+        cursor: grabbing;
+        -webkit-user-select: none;
+        /* Para navegadores basados en Webkit (Chrome, Safari) */
+        -moz-user-select: none;
+        /* Para navegadores basados en Gecko (Firefox) */
+        -ms-user-select: none;
+        /* Para navegadores basados en Trident (IE) */
+        user-select: none;
+        /* Para otros navegadores */
+    }
+}
+
+@media (max-width: 576px) {
+    .cont-info {
+        padding: 0 !important;
+    }
+
+    .cont-info h4 {
+        font-size: 16px;
+    }
+
+    .cont-info p {
+        font-size: 14px;
+        margin-bottom: 1.5rem;
     }
 }
