@@ -199,4 +199,13 @@
         font-size: 14px;
         margin-bottom: 1.5rem;
     }
+
+    .btn-reservar {
+        font-size: 20px !important;
+        margin: 0 !important;
+    }
+
+    .msm-p span {
+        line-height: 1.32;
+    }
 }

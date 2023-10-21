@@ -144,8 +144,9 @@ footer {
 }
 
 .bg-card-title {
-    background: rgb(255, 109, 0);
-    background: linear-gradient(180deg, rgba(255, 109, 0, 0.5298494397759104) 0%, rgba(244, 244, 244, 0.7651435574229692) 54%, rgba(255, 255, 255, 0.5662640056022409) 100%);
+    background: rgb(98 0 255 / 78%);
+    background: linear-gradient(180deg, rgb(39 0 255 / 53%) 0%, rgba(244, 244, 244, 0.7651435574229692) 54%, rgba(255, 255, 255, 0.5662640056022409) 100%);
+    *background: linear-gradient(180deg, rgba(255, 109, 0, 0.5298494397759104) 0%, rgba(244, 244, 244, 0.7651435574229692) 54%, rgba(255, 255, 255, 0.5662640056022409) 100%);
 }
 
 .content-star {
@@ -175,7 +176,8 @@ footer {
     width: 60px;
     height: 60px;
     float: left;
-    background-color: #3264ff;
+    *background-color: #3264ff;
+    background-color: #5b32ff;
     border-radius: 4px;
 }
 
@@ -325,7 +327,8 @@ footer {
     .mas-mobile {
         font-size: 10px;
         font-weight: 500;
-        color: #dc3545;
+        color: #f8f9fa;
+        *color: #dc3545;
         display: block;
     }
 
