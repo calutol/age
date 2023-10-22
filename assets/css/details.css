@@ -70,7 +70,6 @@
     .box-reserva__fecha {
         font-size: 13px;
     }
-
 }
 
 @media (min-width: 992px) {
@@ -184,6 +183,24 @@
     .content-detail .nav-link {
         color: #343a40;
     }
+
+    /* Dimensiones de imagenes en galeria destino page*/
+    .d-gpc-3 {
+        height: 126px;
+        width: 267px;
+    }
+
+    .d-gpcol-3 {
+        height: 260px;
+        width: 267px;
+    }
+
+    .d-gpcol-2 {
+        height: 100px;
+        width: 152px;
+    }
+
+    .d-gpc-4 {}
 }
 
 @media (max-width: 576px) {
