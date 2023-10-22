@@ -10,6 +10,7 @@
     --color-loader: rgb(108, 117, 125);
     --bg-loader: rgb(108, 117, 125);
     --border-loader: rgb(108, 117, 125);
+    --btn-lateral: #5b32ff;
 }
 
 /* Colores bg y color loading - clases para que sean del mismo color a la hora de cargar el sitio web*/
@@ -176,8 +177,7 @@ footer {
     width: 60px;
     height: 60px;
     float: left;
-    *background-color: #3264ff;
-    background-color: #5b32ff;
+    background-color: var(--btn-lateral);
     border-radius: 4px;
 }
 
