@@ -11,11 +11,16 @@
     --bg-loader: rgb(108, 117, 125);
     --border-loader: rgb(108, 117, 125);
     --btn-lateral: #5b32ff;
+    --rgb-dark: rgb(0 0 0 / 30%);
 }
 
 /* Colores bg y color loading - clases para que sean del mismo color a la hora de cargar el sitio web*/
 .bg-loader {
     background: var(--bg-loader) !important;
+}
+
+.rgb-dark {
+    background-color: var(--rgb-dark);
 }
 
 .color-loader {

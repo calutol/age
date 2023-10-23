@@ -168,8 +168,8 @@
                     </div>
                 </div>
 
-                <!--Card md sm-->
-                <div class="d-xxl-none d-lg-none d-md-block d-sm-block placeholder-glow">
+                <!--Card md sm Carrusel-->
+                <div class="d-xxl-none d-lg-none d-md-block d-sm-block placeholder-glow position-relative">
                     <div class="swiper mySwiper swiperMobile rounded-4">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide swiper-mobile-img bg-secondary">
@@ -183,6 +183,13 @@
                         <div class="swiper-button-next swiper-naVBtn"></div>
                         <div class="swiper-button-prev swiper-naVBtn"></div>
                         <div class="swiper-pagination pagination-naVbtn"></div>
+                    </div>
+                    <div class="position-absolute end-0 top-0 ps-3 m-2 z-1">
+                        <button type="button"
+                            class="btn rgb-dark text-white border-0 rounded-4 fs-7 fw-light color-loader bg-loader border-loader"
+                            data-bs-toggle="modal" data-bs-target="#galeriaDestinos">
+                            <i class="bi bi-image-alt me-2"></i>Galeria
+                        </button>
                     </div>
                 </div>
 
@@ -569,28 +576,32 @@
                     <div class="modal-content border-0 bg-light">
                         <div class="modal-header border-0 pb-0">
                             <h1 class="modal-title fs-6" id="exampleModalLabel">
-                                <span class="py-2 px-3"><i class="bi bi-image-alt me-2"></i>Galería de Turquía en
-                                    fin de
-                                    año - Diciembre 2023</span>
+                                <span class="py-2 px-3"><i class="bi bi-image-alt me-2"></i>Galería <span
+                                        class="d-none d-lg-inline-block">de Turquía en
+                                        fin de año - Diciembre 2023</span></span>
                             </h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div class="swiper mySwiper swiperDesktop rounded-4">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide swiper-lg-img bg-secondary">
-                                        <img src="assets/images/122.jpg" alt=""
-                                            class="img-fluid object-fit-cover rounded-4 w-100">
-                                    </div>
-                                    <div class="swiper-slide swiper-lg-img bg-secondary"></div>
-                                    <div class="swiper-slide swiper-lg-img bg-secondary"></div>
-                                    <div class="swiper-slide swiper-lg-img bg-secondary"></div>
-                                </div>
-                                <div class="swiper-button-next swiper-naVBtn border-2 border light-subtle">
-                                </div>
-                                <div class="swiper-button-prev swiper-naVBtn border-2 border light-subtle">
-                                </div>
-                                <div class="swiper-pagination pagination-naVbtn"></div>
+                            <div class="my-2">
+                                <img src="assets/images/122.jpg" alt=""
+                                    class="img-fluid object-fit-cover rounded-4 w-100">
+                                <small class="fs-7">Lorem ipsum dolor sit amet consectetute fac</small>
+                            </div>
+                            <div class="my-2">
+                                <img src="assets/images/122.jpg" alt=""
+                                    class="img-fluid object-fit-cover rounded-4 w-100">
+                                <small class="fs-7">Lorem ipsum dolor sit amet consectetute fac</small>
+                            </div>
+                            <div class="my-2">
+                                <img src="assets/images/122.jpg" alt=""
+                                    class="img-fluid object-fit-cover rounded-4 w-100">
+                                <small class="fs-7">Lorem ipsum dolor sit amet consectetute fac</small>
+                            </div>
+                            <div class="my-2">
+                                <img src="assets/images/122.jpg" alt=""
+                                    class="img-fluid object-fit-cover rounded-4 w-100">
+                                <small class="fs-7">Lorem ipsum dolor sit amet consectetute fac</small>
                             </div>
                         </div>
                     </div>
