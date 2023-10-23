@@ -1,0 +1,31 @@
+.offer-section {
+    background-color: rgba(255, 0, 0, 0.81) !important;
+    border: 1px solid rgba(189, 21, 21, 0.8901960784313725);
+    animation: liveani 1s infinite alternate;
+
+}
+
+@keyframes liveani {
+    from {
+        opacity: .5;
+    }
+}
+
+.ledContainer {
+    transform: translate(-50%, -50%);
+    background: linear-gradient(-75deg, #FF3850 0%, #FF5065 35%, #FF8C9A 50%, #FF5065 65%, #FF3850 100%);
+    background-position: 0 0;
+    justify-content: center;
+    animation: background 3s infinite alternate;
+}
+
+@keyframes background {
+    100% {
+        background-position: 200px 0;
+    }
+}
+
+.liveText {
+    line-height: 24px;
+    color: #fff;
+}
