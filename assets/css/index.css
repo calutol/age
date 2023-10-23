@@ -163,6 +163,10 @@ footer {
     max-width: 100%;
 }
 
+#buttonUp {
+    transition: all .5s;
+    right: -100px;
+}
 
 .btn-lateral {
     position: fixed;
@@ -215,6 +219,10 @@ footer {
     position: absolute;
     height: 130%;
     width: 180px;
+}
+
+.popup .modal-content {
+    background-color: transparent;
 }
 
 

@@ -3494,10 +3494,17 @@
 
         <!--Botones laterales-->
         <div class="btn-lateral d-none d-sm-none d-lg-block d-md-block">
-            <div class="btn-lateral__item">
+            <div class="btn-lateral__item" id="buttonUp">
                 <a class="nav-link d-flex justify-content-center align-items-center text-white w-100 h-100 fs-3"
                     href="#ancla" title="Arriba">
                     <i class="fa-solid fa-chevron-up"></i>
+                </a>
+            </div>
+            <div class="btn-lateral__item mt-1">
+                <a title="Promoción activa" type="button" target="_blank"
+                    class="nav-link d-flex justify-content-center align-items-center text-white w-100 h-100 fs-3"
+                    href="#" title="Whatsapp" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="bi bi-eye"></i>
                 </a>
             </div>
             <div class="btn-lateral__item mt-1">
@@ -3512,6 +3519,23 @@
 
     <!--Toat desktop-->
     <div class="position-fixed bottom-0 end-0 w-100 toast-custom d-none d-lg-none" style="height: 250px">
+    </div>
+
+    <!-- Modal -->
+    <div class="popup">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content border-0">
+                    <div class="modal-header border-0 py-0">
+                        <button title="Cerrar" type="button" class="btn text-bg-dark ms-auto py-1 px-2 fs-8"
+                            data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                    <div class="modal-body pt-1">
+                        <img class="img-fluid" src="assets/images/Promo/p3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!--Inicio Footer-->

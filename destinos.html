@@ -105,7 +105,7 @@
                     <div class="row placeholder-glow">
                         <div class="col-4 position-relative overflow-hidden">
                             <div class="img-col-4 bg-secondary w-100 h-100 rounded-4 placeholder">
-                                <img src="assets/images/excursiones/japon.jpg" alt=""
+                                <img src="assets/images/excursiones/neworleans.jpg" alt=""
                                     class="img-fluid img-loader object-fit-cover rounded-4 d-gpc-4 w-100">
                                 <span class="position-absolute start-0 bottom-0 ps-3 m-2 ">
                                     <button type="button"
@@ -173,7 +173,8 @@
                     <div class="swiper mySwiper swiperMobile rounded-4">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide swiper-mobile-img bg-secondary">
-                                <img class="placeholder" src="assets/images/122.jpg" alt="">
+                                <img class="placeholder img-fluid img-loader object-fit-cover rounded-4 w-100"
+                                    src="assets/images/122.jpg" alt="">
                             </div>
                             <div class="swiper-slide swiper-mobile-img bg-secondary"></div>
                             <div class="swiper-slide swiper-mobile-img bg-secondary"></div>
@@ -452,9 +453,10 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-3 d-none d-lg-block d-md-block">
-                            <div class="border rounded-4 overflow-hidden sticky-top bg-white box-reserva">
+                        <!--d-none d-lg-block d-md-block-->
+                        <div class="col-lg-3 col-sm-12">
+                            <div
+                                class="border rounded-4 overflow-hidden sticky-top bg-white box-reserva d-none d-lg-block d-md-block">
                                 <div class="border-bottom px-3 py-2">
                                     <div class="text-decoration-line-through text-secondary fw-light fs-7">$260</div>
                                     <div>
@@ -537,11 +539,18 @@
             </div>
 
             <!--Botones laterales-->
-            <div class=" btn-lateral d-none d-sm-none d-lg-block d-md-block">
-                <div class="btn-lateral__item">
+            <div class="btn-lateral d-none d-sm-none d-lg-block d-md-block">
+                <div class="btn-lateral__item" id="buttonUp">
                     <a class="nav-link d-flex justify-content-center align-items-center text-white w-100 h-100 fs-3"
                         href="#ancla" title="Arriba">
                         <i class="fa-solid fa-chevron-up"></i>
+                    </a>
+                </div>
+                <div class="btn-lateral__item mt-1">
+                    <a title="Promoción activa" type="button" target="_blank"
+                        class="nav-link d-flex justify-content-center align-items-center text-white w-100 h-100 fs-3"
+                        href="#" title="Whatsapp" data-bs-toggle="modal" data-bs-target="#PopupModal">
+                        <i class="bi bi-eye"></i>
                     </a>
                 </div>
                 <div class="btn-lateral__item mt-1">
@@ -553,7 +562,7 @@
                 </div>
             </div>
 
-            <!-- Modal -->
+            <!-- Modal GALERIA-->
             <div class="modal fade" id="galeriaDestinos" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-lg">
@@ -570,7 +579,8 @@
                             <div class="swiper mySwiper swiperDesktop rounded-4">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide swiper-lg-img bg-secondary">
-                                        <img src="assets/images/122.jpg" alt="">
+                                        <img src="assets/images/122.jpg" alt=""
+                                            class="img-fluid object-fit-cover rounded-4 w-100">
                                     </div>
                                     <div class="swiper-slide swiper-lg-img bg-secondary"></div>
                                     <div class="swiper-slide swiper-lg-img bg-secondary"></div>
@@ -581,6 +591,24 @@
                                 <div class="swiper-button-prev swiper-naVBtn border-2 border light-subtle">
                                 </div>
                                 <div class="swiper-pagination pagination-naVbtn"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal POPUP -->
+            <div class="popup">
+                <div class="modal fade" id="PopupModal" tabindex="-1" aria-labelledby="PopupModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content border-0">
+                            <div class="modal-header border-0 py-0">
+                                <button title="Cerrar" type="button" class="btn text-bg-dark ms-auto py-1 px-2 fs-8"
+                                    data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                            <div class="modal-body pt-1">
+                                <img class="img-fluid" src="assets/images/Promo/p3.jpg" alt="">
                             </div>
                         </div>
                     </div>
