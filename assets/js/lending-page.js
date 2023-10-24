@@ -18,4 +18,27 @@ function irArriba(pxPantalla) {
         }
     })
 }
-irArriba(2300); 
+irArriba(2300);
+
+// Fecha objetivo de la cuenta regresiva
+const targetDate = new Date('2024-01-01');
+
+function updateCountdown() {
+    const currentDate = new Date();
+    const timeDifference = targetDate - currentDate;
+
+    // Convertir la diferencia de tiempo a días, horas y minutos
+    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeDifference % (1000 * 60)) / (1000));
+
+    // Mostrar la cuenta regresiva en el elemento HTML
+    document.getElementById('countdown').textContent = `${days} : ${hours} : ${minutes} : ${seconds}`;
+
+    // Actualizar la cuenta regresiva cada segundo
+    setTimeout(updateCountdown, 1000);
+}
+
+// Iniciar la cuenta regresiva
+updateCountdown();
