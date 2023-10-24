@@ -24,6 +24,7 @@ irArriba(2300);
 const targetDate = new Date('2024-01-01');
 
 function updateCountdown() {
+    console.log("actualizo")
     const currentDate = new Date();
     const timeDifference = targetDate - currentDate;
 
@@ -34,8 +35,11 @@ function updateCountdown() {
     const seconds = Math.floor((timeDifference % (1000 * 60)) / (1000));
 
     // Mostrar la cuenta regresiva en el elemento HTML
-    document.getElementById('countdown').textContent = `${days} : ${hours} : ${minutes} : ${seconds}`;
-
+    //document.getElementById('countdown').textContent = `${days} : ${hours} : ${minutes} : ${seconds}`;
+    var countdown = document.getElementsByClassName('countdown')
+    for (var i = 0; i < countdown.length; i++) {
+        countdown[i].textContent = `${days} : ${hours} : ${minutes} : ${seconds}`;
+    }
     // Actualizar la cuenta regresiva cada segundo
     setTimeout(updateCountdown, 1000);
 }
