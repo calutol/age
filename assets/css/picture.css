@@ -1,3 +1,30 @@
 .gallery-item {
     cursor: pointer;
+
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 0;
+    display: grid;
+    place-items: center;
+}
+
+.overlay i {
+    color: white;
+    font-size: 2rem;
+    display: none;
+}
+
+.imagen:hover .overlay i {
+    display: block;
+}
+
+.imagen:hover .overlay {
+    height: 100%;
+    width: 100%;
 }
