@@ -56,3 +56,22 @@ document.addEventListener("click", function (e) {
         myModal.show();
     }
 })
+
+// Promociones index
+document.addEventListener("click", function (e) {
+    if (e.target.classList.contains("promo-item")) {
+        const src = e.target.getAttribute("src");
+        document.querySelector(".modal-promos").src = src;
+        const myModal = new bootstrap.Modal(document.getElementById('promox-popup'));
+        myModal.show();
+    }
+})
+
+// Desactivar etiqueta a de index promociones
+const enlaces = document.getElementsByClassName("miEnlace");
+
+for (let i = 0; i < enlaces.length; i++) {
+    enlaces[i].addEventListener("click", function (event) {
+        event.preventDefault();
+    });
+}

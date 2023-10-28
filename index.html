@@ -2831,38 +2831,42 @@
                     <div
                         class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-2 g-md-3 g-lg-4 nav-swiper-mobile nav-swiper-table placeholder-glow">
                         <div class="col-8">
-                            <a class="nav-link h-100 a-card rounded-4 placeholder" href="">
+                            <a type="button" class="nav-link h-100 a-card rounded-4 placeholder miEnlace" href="#">
                                 <div class="card border-0 rounded-4 overflow-hidden bg-secondary-subtle w-100 h-100">
-                                    <img src="assets/images/Promo/p1.png" class="card-img-top rounded-4 gotdx "
+                                    <img src="assets/images/Promo/p1.png"
+                                        class="card-img-top rounded-4 gotdx promo-item" alt="...">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-8">
+                            <a type="button" class="nav-link h-100 a-card rounded-4 placeholder miEnlace" href="#">
+                                <div class="card border-0 rounded-4 overflow-hidden h-100 bg-secondary w-100 h-100">
+                                    <img src="assets/images/Promo/p2.png" class="card-img-top rounded-4 promo-item"
                                         alt="...">
                                 </div>
                             </a>
                         </div>
                         <div class="col-8">
-                            <a class="nav-link h-100 a-card rounded-4 placeholder" href="">
+                            <a type="button" class="nav-link h-100 a-card rounded-4 placeholder miEnlace" href="#">
                                 <div class="card border-0 rounded-4 overflow-hidden h-100 bg-secondary w-100 h-100">
-                                    <img src="assets/images/Promo/p2.png" class="card-img-top rounded-4" alt="...">
+                                    <img src="assets/images/Promo/p3.jpg" class="card-img-top rounded-4 promo-item"
+                                        alt="...">
                                 </div>
                             </a>
                         </div>
                         <div class="col-8">
-                            <a class="nav-link h-100 a-card rounded-4 placeholder" href="">
+                            <a type="button" class="nav-link h-100 a-card rounded-4 placeholder miEnlace" href="#">
                                 <div class="card border-0 rounded-4 overflow-hidden h-100 bg-secondary w-100 h-100">
-                                    <img src="assets/images/Promo/p3.jpg" class="card-img-top rounded-4" alt="...">
+                                    <img src="assets/images/Promo/p4.jpg" class="card-img-top rounded-4 promo-item"
+                                        alt="...">
                                 </div>
                             </a>
                         </div>
                         <div class="col-8">
-                            <a class="nav-link h-100 a-card rounded-4 placeholder" href="">
+                            <a type="button" class="nav-link h-100 a-card rounded-4 placeholder miEnlace" href="#">
                                 <div class="card border-0 rounded-4 overflow-hidden h-100 bg-secondary w-100 h-100">
-                                    <img src="assets/images/Promo/p4.jpg" class="card-img-top rounded-4" alt="...">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-8">
-                            <a class="nav-link h-100 a-card rounded-4 placeholder" href="">
-                                <div class="card border-0 rounded-4 overflow-hidden h-100 bg-secondary w-100 h-100">
-                                    <img src="assets/images/Promo/p5.jpg" class="card-img-top rounded-4" alt="...">
+                                    <img src="assets/images/Promo/p5.jpg" class="card-img-top rounded-4 promo-item"
+                                        alt="...">
                                 </div>
                             </a>
                         </div>
@@ -3521,9 +3525,9 @@
         </div>
     </main>
 
-    <!--Toat desktop-->
+    <!--Toat desktop
     <div class="position-fixed bottom-0 end-0 w-100 toast-custom d-none d-lg-none" style="height: 250px">
-    </div>
+    </div>-->
 
     <!-- Modal -->
     <div class="popup">
@@ -3542,6 +3546,24 @@
         </div>
     </div>
 
+    <!-- Modal  Promo-->
+    <div class="modal fade" id="promox-popup" tabindex="-2" aria-labelledby="promox-popupModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content border-0 bg-light">
+                <div class="modal-header border-0 pb-0">
+                    <h1 class="modal-title fs-6" id="promox-popupModalLabel">
+                        <span class="py-2 px-3"><i class="bi bi-stars me-2"></i>Promoción activa<span
+                                class="d-none d-lg-inline-block"></span></span>
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/images/Promo/p1.png" alt=""
+                        class="img-fluid object-fit-cover rounded-4 modal-promos">
+                </div>
+            </div>
+        </div>
+    </div>
     <!--Inicio Footer-->
     <footer class="w-100 border-top p-3 p-lg-0">
         <div class="container py-4">
